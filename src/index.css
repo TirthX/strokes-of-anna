@@ -1,96 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Minimalist Art Showcase Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Minimalist Color Palette - Warm whites and deep charcoals */
+    --background: 0 0% 99%;
+    --foreground: 220 13% 18%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --card-foreground: 220 13% 18%;
+    
+    --primary: 220 13% 18%;
+    --primary-foreground: 0 0% 99%;
+    
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 220 13% 18%;
+    
+    --muted: 220 13% 97%;
+    --muted-foreground: 220 9% 46%;
+    
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 99%;
+    
+    --border: 220 13% 92%;
+    --input: 220 13% 92%;
+    --ring: 220 13% 18%;
+    
+    /* Art Showcase Specific Colors */
+    --art-frame: 35 20% 85%;
+    --art-shadow: 220 13% 18% / 0.1;
+    --hero-overlay: 220 13% 18% / 0.3;
+    
+    /* Typography Scale */
+    --text-hero: 4rem;
+    --text-title: 2.5rem;
+    --text-subtitle: 1.25rem;
+    --text-body: 1rem;
+    --text-caption: 0.875rem;
+    
+    /* Spacing Scale */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    
+    /* Animation Timing */
+    --timing-fast: 0.2s;
+    --timing-normal: 0.3s;
+    --timing-slow: 0.5s;
+    --timing-slower: 0.8s;
+    
+    --radius: 0.125rem;
   }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-light tracking-tight;
+  }
+}
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+@layer components {
+  /* Loading Animation */
+  .loading-text {
+    @apply font-display text-6xl font-light tracking-wide;
+    animation: typewriter 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    width: 0;
+  }
+  
+  .loading-fade-in {
+    animation: fadeInUp 1s ease-out 2.5s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  /* Art Card Hover Effects */
+  .art-card {
+    @apply relative overflow-hidden bg-card rounded-sm transition-all duration-300;
+    box-shadow: 0 2px 8px hsl(var(--art-shadow));
+  }
+  
+  .art-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px hsl(var(--art-shadow));
+  }
+  
+  .art-card .art-overlay {
+    @apply absolute inset-0 bg-black/0 transition-all duration-300 flex items-end p-6;
+  }
+  
+  .art-card:hover .art-overlay {
+    @apply bg-black/60;
+  }
+  
+  .art-card .art-title {
+    @apply text-white font-display text-xl tracking-wide opacity-0 transform translate-y-4 transition-all duration-300;
+  }
+  
+  .art-card:hover .art-title {
+    @apply opacity-100 transform translate-y-0;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    @apply relative h-screen flex items-center justify-center overflow-hidden;
+  }
+  
+  .hero-image {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/20;
+  }
+  
+  /* Newsletter Banner */
+  .newsletter-banner {
+    @apply bg-muted/50 py-16 text-center;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply relative font-medium tracking-wide transition-colors duration-300 hover:text-accent;
+  }
+  
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+    content: '';
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* Frame Effect for Gallery */
+  .art-frame {
+    @apply relative p-4 bg-gradient-to-br from-art-frame to-white;
+    box-shadow: 
+      inset 0 0 0 1px hsl(var(--border)),
+      0 4px 12px hsl(var(--art-shadow));
+  }
+  
+  .art-frame::before {
+    @apply absolute inset-2 border border-border/50;
+    content: '';
+  }
+}
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: hsl(var(--foreground)); }
+}
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
