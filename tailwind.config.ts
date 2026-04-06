@@ -21,6 +21,9 @@ export default {
 			fontFamily: {
 				'display': ['Playfair Display', 'serif'],
 				'body': ['Inter', 'sans-serif'],
+				'script': ['var(--font-script)', 'cursive'],
+				'hand': ['var(--font-hand)', 'cursive'],
+				'serif': ['var(--font-serif)', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -97,7 +100,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			transitionTimingFunction: {
+				"out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

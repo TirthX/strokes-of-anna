@@ -1,78 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Minimalist Art Showcase Design System */
+/* The Art Showcase Design System */
 
 @layer base {
   :root {
-    /* Minimalist Color Palette - Warm whites and deep charcoals */
-    --background: 0 0% 99%;
-    --foreground: 220 13% 18%;
+    /* Human & Organic Color Palette */
+    --background: 35 30% 95%; /* Warm Parchment #F5F2ED approx */
+    --foreground: 0 0% 15%;   /* Deep Charcoal Ink #262626 */
     
-    --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card: 35 30% 98%;
+    --card-foreground: 0 0% 15%;
     
-    --primary: 220 13% 18%;
-    --primary-foreground: 0 0% 99%;
+    --primary: 0 0% 15%;
+    --primary-foreground: 35 30% 95%;
     
-    --secondary: 220 13% 95%;
-    --secondary-foreground: 220 13% 18%;
+    --secondary: 35 20% 90%;
+    --secondary-foreground: 0 0% 15%;
     
-    --muted: 220 13% 97%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 35 15% 92%;
+    --muted-foreground: 0 0% 40%;
     
-    --accent: 25 95% 53%;
-    --accent-foreground: 0 0% 99%;
+    --accent: 12 40% 50%; /* Terracotta Wash */
+    --accent-foreground: 35 30% 95%;
     
-    --border: 220 13% 92%;
-    --input: 220 13% 92%;
-    --ring: 220 13% 18%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 0 0% 15%;
     
-    /* Art Showcase Specific Colors */
+    /* Art Showcase Specifics (Retained for config compatibility) */
     --art-frame: 35 20% 85%;
-    --art-shadow: 220 13% 18% / 0.1;
-    --hero-overlay: 220 13% 18% / 0.3;
+    --art-shadow: 0 0% 0% / 0.1;
+    --hero-overlay: 0 0% 0% / 0.3;
     
-    /* Typography Scale */
-    --text-hero: 4rem;
-    --text-title: 2.5rem;
-    --text-subtitle: 1.25rem;
-    --text-body: 1rem;
-    --text-caption: 0.875rem;
+    /* Art Showcase Typography Scale */
+    --font-script: 'Dancing Script', cursive;
+    --font-hand: 'EB Garamond', serif; /* Use Serif for body text notes instead of Script */
+    --font-serif: 'EB Garamond', serif;
     
-    /* Spacing Scale */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-2xl: 4rem;
-    
-    /* Animation Timing */
-    --timing-fast: 0.2s;
-    --timing-normal: 0.3s;
-    --timing-slow: 0.5s;
-    --timing-slower: 0.8s;
-    
-    --radius: 0.125rem;
+    --radius: 0.1rem;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    cursor: none !important; /* Hide default cursor for custom brush-tip */
   }
   
   body {
-    @apply bg-background text-foreground font-body antialiased;
-    line-height: 1.6;
+    @apply bg-background text-foreground font-serif antialiased overflow-x-hidden;
+    line-height: 1.7;
+    /* Removed dot grid for a cleaner gallery aesthetic */
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-light tracking-tight;
+  h1, h2, h3 {
+    @apply font-script font-normal tracking-tight;
+  }
+  
+  p {
+    @apply font-serif text-lg leading-relaxed;
   }
 }
 
