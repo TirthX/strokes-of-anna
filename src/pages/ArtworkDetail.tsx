@@ -78,7 +78,7 @@ const ArtworkDetail = () => {
                className={`flex flex-col space-y-12 ${artwork.isLandscape ? 'max-w-3xl mx-auto text-center' : 'pt-8'}`}
             >
                <div className="space-y-4">
-                  <h1 className="font-script text-7xl md:text-8xl leading-none text-foreground">
+                  <h1 className="font-script text-5xl md:text-7xl leading-tight text-foreground">
                     {artwork.title}
                   </h1>
                </div>
@@ -86,11 +86,11 @@ const ArtworkDetail = () => {
                 <div className={`grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8 ${artwork.isLandscape ? 'justify-items-center' : ''}`}>
                   <div className="space-y-2">
                     <span className="font-hand text-xl text-foreground/40 block">Medium</span>
-                    <p className="font-hand text-3xl text-foreground/80">Original Painting</p>
+                    <p className="font-hand text-2xl text-foreground/80">Acrylic Painting</p>
                   </div>
                   <div className="space-y-2">
                     <span className="font-hand text-xl text-foreground/40 block">Dimensions</span>
-                    <p className="font-hand text-3xl text-foreground/80">{artwork.dimensions}</p>
+                    <p className="font-hand text-2xl text-foreground/80">{artwork.dimensions}</p>
                   </div>
                   {!artwork.isSold && (
                     <div className="space-y-2">

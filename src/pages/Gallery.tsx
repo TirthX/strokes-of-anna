@@ -100,7 +100,7 @@ const Gallery = () => {
                          
                          <div className="mt-8 px-4 flex justify-between items-start">
                            <div>
-                             <h3 className="font-script text-3xl text-foreground group-hover:text-accent transition-colors">
+                             <h3 className="font-script text-2xl text-foreground group-hover:text-accent transition-colors">
                                {artwork.title}
                              </h3>
                              {/* <p className="font-hand text-xl text-muted-foreground italic mt-2">

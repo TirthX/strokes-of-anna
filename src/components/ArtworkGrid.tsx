@@ -28,7 +28,7 @@ const artworks = [
   {
     id: 1,
     page: 1,
-    title: "The Quiet Crossing",
+    title: "The Quiet Crossing - original painting",
     image: artworkQuietCrossing,
     dimensions: "30\" x 30\"",
     price: "$250",
@@ -38,7 +38,7 @@ const artworks = [
   {
     id: 2,
     page: 1,
-    title: "Bound by the Journey",
+    title: "Bound by the Journey - original painting",
     image: artworkBbyJ,
     dimensions: "16\" x 20\"",
     price: "$300",
@@ -48,7 +48,7 @@ const artworks = [
   {
     id: 3,
     page: 1,
-    title: "Calm in the Chaos",
+    title: "Calm in the Chaos - original painting",
     image: artworkCitC,
     dimensions: "16\" x 20\"",
     price: "$399",
@@ -58,7 +58,7 @@ const artworks = [
   {
     id: 4,
     page: 1,
-    title: "Duality in Motion",
+    title: "Duality in Motion - original painting",
     image: artworkDimM,
     dimensions: "16\" x 20\"",
     price: "$250",
@@ -68,7 +68,7 @@ const artworks = [
   {
     id: 5,
     page: 1,
-    title: "A Quite Journey",
+    title: "A Quite Journey - original painting",
     image: artworkAQJ,
     dimensions: "20\" x 20\"",
     price: "$499",
@@ -79,7 +79,7 @@ const artworks = [
   {
     id: 6,
     page: 1,
-    title: "The Edge of Becoming",
+    title: "The Edge of Becoming - original painting",
     image: artworkEdge,
     dimensions: "48\" x 24\"",
     price: "$299",
@@ -90,7 +90,7 @@ const artworks = [
   {
     id: 7,
     page: 1,
-    title: "The World Can Rush",
+    title: "The World Can Rush - original painting",
     image: artworkWorldRush,
     dimensions: "26\" x 20\" (Framed)",
     price: "$250",
@@ -100,7 +100,7 @@ const artworks = [
   {
     id: 8,
     page: 2,
-    title: "Held by the Horizon",
+    title: "Held by the Horizon - original painting",
     image: artworkHbtH,
     dimensions: "Canvas: 20\" x 20\", Framed: 25.75\" x 25.75\"",
     price: "$199",
@@ -110,7 +110,7 @@ const artworks = [
   {
     id: 9,
     page: 2,
-    title: "The Gaze",
+    title: "The Gaze - original painting",
     image: artworkGaze,
     dimensions: "16\" x 20\"",
     price: "$259",
@@ -120,7 +120,7 @@ const artworks = [
   {
     id: 10,
     page: 2,
-    title: "In the Silence He Awakens",
+    title: "In the Silence He Awakens - original painting",
     image: artworkInSilence,
     dimensions: "16\" x 20\"",
     price: "$299",
@@ -130,7 +130,7 @@ const artworks = [
   {
     id: 11,
     page: 2,
-    title: "Shakti",
+    title: "Shakti - original painting",
     image: artworkShakti,
     dimensions: "Canvas: 16\" x 20\", Framed: 24\" x 21\"",
     price: "$199",
@@ -140,7 +140,7 @@ const artworks = [
   {
     id: 12,
     page: 2,
-    title: "Emerald Nights",
+    title: "Emerald Nights - original painting",
     image: artworkEN,
     dimensions: "12\" x 16\" (Canvas)",
     price: "$110",
@@ -150,7 +150,7 @@ const artworks = [
   {
     id: 13,
     page: 2,
-    title: "After the Rain",
+    title: "After the Rain - original painting",
     image: artworkATR,
     dimensions: "Canvas: 16\" x 20\", Framed: 26.4\" x 22.5\"",
     price: "$159",
@@ -160,7 +160,7 @@ const artworks = [
   {
     id: 14,
     page: 2,
-    title: "Morning Meditation",
+    title: "Morning Meditation - original painting",
     image: artworkMM,
     dimensions: "Canvas: 16\" x 20\", Framed: 24\" x 21.5\"",
     price: "$140",
@@ -170,7 +170,7 @@ const artworks = [
   {
     id: 15,
     page: 2,
-    title: "Rooted",
+    title: "Rooted - original painting",
     image: artworkRooted,
     dimensions: "16\" x 20\" (Canvas)",
     price: "$159",
@@ -180,7 +180,7 @@ const artworks = [
   {
     id: 16,
     page: 2,
-    title: "Emergence",
+    title: "Emergence - original painting",
     image: artworkEmergence,
     dimensions: "39\" x 39\"",
     price: "$499",
@@ -190,7 +190,7 @@ const artworks = [
   {
     id: 17,
     page: 2,
-    title: "Serenity in Bloom",
+    title: "Serenity in Bloom - original painting",
     image: artworkSerenity,
     dimensions: "16\" x 20\"",
     price: "$110",
