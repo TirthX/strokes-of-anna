@@ -30,8 +30,8 @@ const artworks = [
     page: 1,
     title: "The Quiet Crossing",
     image: artworkQuietCrossing,
-    dimensions: "16\" x 20\"",
-    price: "INR 1,20,000",
+    dimensions: "30\" x 30\"",
+    price: "$250",
     isSold: false,
     description: "Capturing the stillness of a moment in transit through nature."
   },
@@ -41,7 +41,7 @@ const artworks = [
     title: "Bound by the Journey",
     image: artworkBbyJ,
     dimensions: "16\" x 20\"",
-    price: "INR 85,000",
+    price: "$300",
     isSold: true,
     description: "Tracing the invisible threads that connect our paths through the landscape."
   },
@@ -51,7 +51,7 @@ const artworks = [
     title: "Calm in the Chaos",
     image: artworkCitC,
     dimensions: "16\" x 20\"",
-    price: "INR 2,10,000",
+    price: "$399",
     isSold: true,
     description: "Finding a center of peace amidst the vibrant energy of the world."
   },
@@ -61,7 +61,7 @@ const artworks = [
     title: "Duality in Motion",
     image: artworkDimM,
     dimensions: "16\" x 20\"",
-    price: "INR 1,50,000",
+    price: "$250",
     isSold: false,
     description: "The contrast between stillness and movement within the natural frame."
   },
@@ -70,9 +70,10 @@ const artworks = [
     page: 1,
     title: "A Quite Journey",
     image: artworkAQJ,
-    dimensions: "16\" x 20\"",
-    price: "INR 1,10,000",
+    dimensions: "20\" x 20\"",
+    price: "$499",
     isSold: false,
+    isLandscape: true,
     description: "A meditative transit through the heart of the landscape."
   },
   {
@@ -81,8 +82,9 @@ const artworks = [
     title: "The Edge of Becoming",
     image: artworkEdge,
     dimensions: "48\" x 24\"",
-    price: "INR 2,40,000",
+    price: "$299",
     isSold: false,
+    isLandscape: true,
     description: "A study of transformation at the boundaries of perceived reality."
   },
   {
@@ -91,7 +93,7 @@ const artworks = [
     title: "The World Can Rush",
     image: artworkWorldRush,
     dimensions: "26\" x 20\" (Framed)",
-    price: "INR 3,20,000",
+    price: "$250",
     isSold: false,
     description: "A reminder of inner stillness while the collective pace quickens."
   },
@@ -101,7 +103,7 @@ const artworks = [
     title: "Held by the Horizon",
     image: artworkHbtH,
     dimensions: "Canvas: 20\" x 20\", Framed: 25.75\" x 25.75\"",
-    price: "INR 95,000",
+    price: "$199",
     isSold: false,
     description: "A serene exploration of the meeting point between earth and sky."
   },
@@ -111,109 +113,89 @@ const artworks = [
     title: "The Gaze",
     image: artworkGaze,
     dimensions: "16\" x 20\"",
-    price: "INR 75,000",
+    price: "$259",
     isSold: true,
     description: "An intimate portrait of observation and internal reflection."
   },
   {
-     id: 10,
-     page: 2,
-     title: "In the Silence He Awakens",
-     image: artworkInSilence,
-     dimensions: "16\" x 20\"",
-     price: "INR 1,80,000",
-     isSold: true,
-     description: "A spiritual awakening reflected in the dawn of a new landscape."
+    id: 10,
+    page: 2,
+    title: "In the Silence He Awakens",
+    image: artworkInSilence,
+    dimensions: "16\" x 20\"",
+    price: "$299",
+    isSold: true,
+    description: "A spiritual awakening reflected in the dawn of a new landscape."
   },
   {
-     id: 11,
-     page: 2,
-     title: "Shakti",
-     image: artworkShakti,
-     dimensions: "Canvas: 16\" x 20\", Framed: 24\" x 21\"",
-     price: "INR 2,10,000",
-     isSold: false,
-     description: "A powerful expression of natural energy and creative force."
+    id: 11,
+    page: 2,
+    title: "Shakti",
+    image: artworkShakti,
+    dimensions: "Canvas: 16\" x 20\", Framed: 24\" x 21\"",
+    price: "$199",
+    isSold: false,
+    description: "A powerful expression of natural energy and creative force."
   },
   {
-     id: 12,
-     page: 2,
-     title: "Emerald Nights",
-     image: artworkEN,
-     dimensions: "12\" x 16\" (Canvas)",
-     price: "INR 1,25,000",
-     isSold: false,
-     description: "The mysterious and deep atmosphere of the night woods."
+    id: 12,
+    page: 2,
+    title: "Emerald Nights",
+    image: artworkEN,
+    dimensions: "12\" x 16\" (Canvas)",
+    price: "$110",
+    isSold: false,
+    description: "The mysterious and deep atmosphere of the night woods."
   },
   {
-     id: 13,
-     page: 2,
-     title: "After the Rain",
-     image: artworkATR,
-     dimensions: "Canvas: 16\" x 20\", Framed: 26.4\" x 22.5\"",
-     price: "INR 1,15,000",
-     isSold: false,
-     description: "The clarity and freshness that follows a summer storm."
+    id: 13,
+    page: 2,
+    title: "After the Rain",
+    image: artworkATR,
+    dimensions: "Canvas: 16\" x 20\", Framed: 26.4\" x 22.5\"",
+    price: "$159",
+    isSold: false,
+    description: "The clarity and freshness that follows a summer storm."
   },
   {
-     id: 14,
-     page: 2,
-     title: "Morning Meditation",
-     image: artworkMM,
-     dimensions: "Canvas: 16\" x 20\", Framed: 24\" x 21.5\"",
-     price: "INR 1,40,000",
-     isSold: false,
-     description: "The quiet clarity of a new day beginning in nature."
+    id: 14,
+    page: 2,
+    title: "Morning Meditation",
+    image: artworkMM,
+    dimensions: "Canvas: 16\" x 20\", Framed: 24\" x 21.5\"",
+    price: "$140",
+    isSold: false,
+    description: "The quiet clarity of a new day beginning in nature."
   },
   {
-     id: 15,
-     page: 2,
-     title: "Rooted",
-     image: artworkRooted,
-     dimensions: "16\" x 20\" (Canvas)",
-     price: "INR 2,20,000",
-     isSold: false,
-     description: "Connecting our foundations to the grounding earth."
+    id: 15,
+    page: 2,
+    title: "Rooted",
+    image: artworkRooted,
+    dimensions: "16\" x 20\" (Canvas)",
+    price: "$159",
+    isSold: false,
+    description: "Connecting our foundations to the grounding earth."
   },
   {
-     id: 16,
-     page: 2,
-     title: "Emergence",
-     image: artworkEmergence,
-     dimensions: "39\" x 39\"",
-     price: "INR 2,80,000",
-     isSold: false,
-     description: "The powerful unfolding of form and color from nothingness."
+    id: 16,
+    page: 2,
+    title: "Emergence",
+    image: artworkEmergence,
+    dimensions: "39\" x 39\"",
+    price: "$499",
+    isSold: false,
+    description: "The powerful unfolding of form and color from nothingness."
   },
   {
-     id: 17,
-     page: 2,
-     title: "Stillness Beneath the Rush",
-     image: artworkStillness1,
-     dimensions: "36\" x 36\"",
-     price: "INR 2,50,000",
-     isSold: false,
-     description: "Finding silence in the deep currents of existence."
-  },
-  {
-     id: 18,
-     page: 2,
-     title: "Stillness Beneath the Rush II",
-     image: artworkStillness2,
-     dimensions: "36\" x 36\"",
-     price: "INR 2,50,000",
-     isSold: false,
-     description: "A companion piece exploring deeper layers of internal peace."
-  },
-  {
-     id: 19,
-     page: 2,
-     title: "Serenity in Bloom",
-     image: artworkSerenity,
-     dimensions: "16\" x 20\"",
-     price: "INR 1,90,000",
-     isSold: false,
-     description: "The delicate peacefulness of natural growth."
+    id: 17,
+    page: 2,
+    title: "Serenity in Bloom",
+    image: artworkSerenity,
+    dimensions: "16\" x 20\"",
+    price: "$110",
+    isSold: false,
+    description: "The delicate peacefulness of natural growth."
   }
 ];
 

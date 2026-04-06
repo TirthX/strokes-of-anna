@@ -23,7 +23,7 @@ const Gallery = () => {
              className="mb-12 md:mb-24 text-center relative"
           >
             <h1 className="font-script text-6xl md:text-8xl text-foreground">
-              The <span className="text-accent underline decoration-wavy decoration-1">Collection</span>
+              The Collection
             </h1>
             <p className="font-hand text-2xl text-muted-foreground mt-4 italic">
               "Ordered by mood, rather than year."
@@ -59,13 +59,14 @@ const Gallery = () => {
                    transition={{ duration: 0.5 }}
                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12"
                  >
-                   {filteredArtworks.map((artwork, index) => (
+                   {filteredArtworks.map((artwork: any, index) => (
                      <motion.div
                         key={artwork.id}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.05 }}
+                        className={artwork.isLandscape ? "md:col-span-2 lg:col-span-2" : ""}
                      >
                        <Link 
                          to={`/artwork/${artwork.id}`}
@@ -83,6 +84,17 @@ const Gallery = () => {
                                  clipPath: 'polygon(0.5% 1%, 99.5% 0.5%, 100% 99%, 0.5% 99.5%)',
                                }}
                              />
+                             {artwork.isSold && (
+                               <motion.div 
+                                 initial={{ opacity: 0, x: 20 }}
+                                 whileInView={{ opacity: 1, x: 0 }}
+                                 className="absolute bottom-6 right-6 z-20"
+                               >
+                                 <span className="font-serif text-2xl tracking-[0.2em] text-red-600 drop-shadow-md border-b border-red-600/30 pb-1">
+                                    SOLD
+                                 </span>
+                               </motion.div>
+                             )}
                            </div>
                          </div>
                          

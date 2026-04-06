@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 text-sm font-hand text-xl text-muted-foreground opacity-60">
           <span>+1 (248) 872-6354</span>
           <span className="hidden md:block opacity-30">•</span>
-          <a href="mailto:Anna.pattabhi@gmail.com" className="hover:text-accent transition-colors">Anna.pattabhi@gmail.com</a>
+          <a href="mailto:anna.pattabhi@gmail.com" className="hover:text-accent transition-colors">anna.pattabhi@gmail.com</a>
         </div>
         
         <div className="mt-8 text-sm font-serif italic text-muted-foreground opacity-40">

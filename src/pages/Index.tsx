@@ -17,11 +17,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-transparent">
       <Header />
-      <main className="relative z-10 space-y-32">
+      <main className="relative z-10">
         <HeroSection />
-        <ScrollStory />
-        <ArtworkGrid />
-        <NewsletterBanner />
       </main>
       <Footer />
     </div>

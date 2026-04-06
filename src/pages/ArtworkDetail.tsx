@@ -39,15 +39,15 @@ const ArtworkDetail = () => {
             <span>Back to Gallery</span>
           </Link>
           
-          <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
+          <div className={`${artwork.isLandscape ? 'max-w-5xl mx-auto' : 'grid md:grid-cols-2 gap-16 lg:gap-24 items-start'}`}>
             {/* Artwork Image as a Physical Piece */}
             <motion.div 
                initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-               className="relative"
+               className={`relative ${artwork.isLandscape ? 'mb-24' : ''}`}
             >
-              <div className="absolute inset-4 bg-black/5 blur-2xl translate-x-4 translate-y-4" />
-              <div className="relative bg-white p-4 shadow-2xl">
+              <div className="absolute inset-4 bg-black/5 blur-3xl translate-x-4 translate-y-4" />
+              <div className="relative bg-white p-4 md:p-6 shadow-2xl">
                 <img 
                   src={artwork.image} 
                   alt={artwork.title}
@@ -56,11 +56,17 @@ const ArtworkDetail = () => {
                     clipPath: 'polygon(0.8% 0.8%, 99.2% 0.2%, 100% 99.8%, 0.2% 99.2%)'
                   }}
                 />
-                
-                {/* Handwriting on the border */}
-                <div className="absolute -bottom-10 right-4 font-hand text-2xl text-accent/60 opacity-0 group-hover:opacity-100 transition-opacity">
-                  Captured in the early morning light...
-                </div>
+                {artwork.isSold && (
+                  <motion.div 
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="absolute bottom-10 right-10 z-20"
+                  >
+                    <span className="font-serif text-3xl tracking-[0.3em] text-red-600 drop-shadow-xl border-b border-red-600/30 pb-1">
+                       SOLD
+                    </span>
+                  </motion.div>
+                )}
               </div>
             </motion.div>
             
@@ -69,24 +75,15 @@ const ArtworkDetail = () => {
                initial={{ opacity: 0, x: 20 }}
                animate={{ opacity: 1, x: 0 }}
                transition={{ delay: 0.3 }}
-               className="space-y-12 pt-8"
+               className={`flex flex-col space-y-12 ${artwork.isLandscape ? 'max-w-3xl mx-auto text-center' : 'pt-8'}`}
             >
-              <div className="space-y-4">
-                <h1 className="font-script text-6xl md:text-8xl text-foreground leading-none">
-                  {artwork.title}
-                </h1>
-               
-              </div>
-              
-              <div className="space-y-12">
-                <div className="relative">
-                  <div className="absolute -left-8 top-0 bottom-0 w-[2px] bg-accent/20" />
-                  {/* <p className="font-serif text-2xl italic leading-relaxed text-muted-foreground pl-4">
-                    "{artwork.description}"
-                  </p> */}
-                </div>
-                
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-8">
+               <div className="space-y-4">
+                  <h1 className="font-script text-7xl md:text-8xl leading-none text-foreground">
+                    {artwork.title}
+                  </h1>
+               </div>
+
+                <div className={`grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8 ${artwork.isLandscape ? 'justify-items-center' : ''}`}>
                   <div className="space-y-2">
                     <span className="font-hand text-xl text-foreground/40 block">Medium</span>
                     <p className="font-hand text-3xl text-foreground/80">Original Painting</p>
@@ -95,32 +92,29 @@ const ArtworkDetail = () => {
                     <span className="font-hand text-xl text-foreground/40 block">Dimensions</span>
                     <p className="font-hand text-3xl text-foreground/80">{artwork.dimensions}</p>
                   </div>
-                  <div className="space-y-2">
-                    <span className="font-hand text-xl text-foreground/40 block">Status</span>
-                    <p className={`font-script text-4xl ${artwork.isSold ? 'text-foreground/40' : 'text-accent'}`}>
-                      {artwork.isSold ? "Sold Out" : artwork.price}
-                    </p>
-                  </div>
+                  {!artwork.isSold && (
+                    <div className="space-y-2">
+                      <span className="font-hand text-xl text-foreground/40 block">Price</span>
+                      <p className="font-script text-4xl text-accent">
+                        {artwork.price}
+                      </p>
+                    </div>
+                  )}
                 </div>
                 
                 {!artwork.isSold && (
-                  <div className="pt-8">
-                    <Link 
-                      to="/contact"
-                      className="inline-block group relative"
-                    >
-                      <span className="font-script text-4xl text-foreground group-hover:text-accent transition-colors relative z-10">
-                        Inquire for Details
-                      </span>
-                      <motion.div 
-                        className="absolute -bottom-2 left-0 h-4 bg-accent/10 -z-0"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "100%" }}
-                      />
-                    </Link>
+                  <div className={`pt-12 border-t border-black/5 ${artwork.isLandscape ? 'text-center' : ''}`}>
+                    <p className="font-serif italic text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                      For purchase details please email <span className="font-script text-3xl text-foreground ml-1">Anna Pattabhi</span> at 
+                      <a 
+                        href="mailto:anna.pattabhi@gmail.com" 
+                        className="text-accent hover:underline decoration-1 underline-offset-4 ml-2"
+                      >
+                        anna.pattabhi@gmail.com
+                      </a>
+                    </p>
                   </div>
                 )}
-              </div>
             </motion.div>
           </div>
 

@@ -59,6 +59,17 @@ const HeroSection = () => {
               className="w-full h-auto grayscale-[0.1] hover:grayscale-0 transition-all duration-[3000ms] ease-out-expo transform scale-100 hover:scale-[1.02]"
             />
           </div>
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 1.2 }}
+            className="text-center mt-12"
+          >
+             <h3 className="font-script text-4xl text-foreground/60 italic">
+               Stillness Beneath the Rush
+             </h3>
+          </motion.div>
         </motion.div>
       </div>
 
