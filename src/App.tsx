@@ -12,6 +12,7 @@ import Impact from "./pages/Impact";
 import ArtworkDetail from "./pages/ArtworkDetail";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
