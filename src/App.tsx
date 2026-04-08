@@ -11,7 +11,6 @@ import Contact from "./pages/Contact";
 import Impact from "./pages/Impact";
 import ArtworkDetail from "./pages/ArtworkDetail";
 import NotFound from "./pages/NotFound";
-import CustomCursor from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -20,7 +19,6 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ReactLenis root>
       <TooltipProvider>
-        <CustomCursor />
         <Toaster />
         <Sonner />
         <BrowserRouter>

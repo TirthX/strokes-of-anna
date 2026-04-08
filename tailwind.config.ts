@@ -19,10 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Playfair Display', 'serif'],
-				'body': ['Inter', 'sans-serif'],
-				'script': ['var(--font-script)', 'cursive'],
-				'hand': ['var(--font-hand)', 'cursive'],
+				'display': ['var(--font-display)', 'serif'],
+				'body': ['var(--font-serif)', 'serif'],
+				'script': ['var(--font-script)', 'serif'],
+				'hand': ['var(--font-hand)', 'serif'],
 				'serif': ['var(--font-serif)', 'serif'],
 			},
 			colors: {
@@ -52,6 +52,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'art-frame': 'hsl(var(--art-frame))',
+				nav: {
+					DEFAULT: 'hsl(var(--nav-bg))',
+					foreground: 'hsl(var(--nav-text))',
+				},
 			},
 			spacing: {
 				'xs': 'var(--space-xs)',

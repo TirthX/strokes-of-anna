@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ExternalLink, Youtube, ShieldCheck } from 'lucide-react';
+import artworkCosmicStorm from '@/assets/TheCosmicStorm48x36.jpeg';
 
 const Impact = () => {
   const organizations = [
@@ -25,19 +26,41 @@ const Impact = () => {
     <div className="min-h-screen bg-transparent">
       <Header />
       
-      <main className="pt-32 lg:pt-48 pb-32 px-6">
+      <main className="pt-24 md:pt-32 lg:pt-40 pb-32 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
              className="text-center mb-24"
           >
-            <h1 className="font-script text-7xl md:text-9xl text-foreground mb-6">
+            <h1 className="font-display text-xl md:text-3xl text-foreground tracking-[0.3em] uppercase mb-6">
               Proceeds Donated to
             </h1>
             <p className="font-serif text-xl tracking-[0.3em] text-accent uppercase italic">
               Art with Purpose
             </p>
+          </motion.div>
+
+          {/* Featured Artwork: The Cosmic Storm */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 0.2 }}
+            className="mb-24 relative"
+          >
+            <div className="bg-white p-4 shadow-2xl border border-black/5 relative z-10">
+              <img 
+                src={artworkCosmicStorm} 
+                alt="The Cosmic Storm" 
+                className="w-full h-auto block"
+              />
+              <div className="p-8 text-center bg-background/50 backdrop-blur-sm">
+                <h3 className="font-display text-xl tracking-[0.3em] uppercase text-foreground mb-2">The Cosmic Storm</h3>
+                <p className="font-serif italic text-muted-foreground">Original artwork contributing to social impact initiatives.</p>
+              </div>
+            </div>
+            {/* Decorative element */}
+            <div className="absolute -inset-4 border border-accent/10 -z-10 translate-x-2 translate-y-2" />
           </motion.div>
           
           <div className="space-y-12">

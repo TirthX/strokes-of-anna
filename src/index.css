@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,28 +8,28 @@
 
 @layer base {
   :root {
-    /* Human & Organic Color Palette */
-    --background: 35 30% 95%; /* Warm Parchment #F5F2ED approx */
-    --foreground: 0 0% 15%;   /* Deep Charcoal Ink #262626 */
+    /* Light Organic Theme */
+    --background: 35 20% 97%; /* Creamy Parchment #FDFBF9 approx */
+    --foreground: 221 44% 23%;   /* Dark Blue Ink */
     
-    --card: 35 30% 98%;
-    --card-foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 221 44% 23%;
     
-    --primary: 0 0% 15%;
-    --primary-foreground: 35 30% 95%;
+    --primary: 221 44% 23%;
+    --primary-foreground: 35 30% 98%;
     
-    --secondary: 35 20% 90%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 35 20% 95%;
+    --secondary-foreground: 221 44% 23%;
     
-    --muted: 35 15% 92%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 35 15% 95%;
+    --muted-foreground: 221 30% 45%;
     
-    --accent: 12 40% 50%; /* Terracotta Wash */
-    --accent-foreground: 35 30% 95%;
+    --accent: 221 44% 35%; /* Lighter Dark Blue */
+    --accent-foreground: 35 30% 98%;
     
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 0 0% 15%;
+    --border: 35 10% 90%;
+    --input: 35 10% 90%;
+    --ring: 221 44% 23%;
     
     /* Art Showcase Specifics (Retained for config compatibility) */
     --art-frame: 35 20% 85%;
@@ -37,28 +37,47 @@
     --hero-overlay: 0 0% 0% / 0.3;
     
     /* Art Showcase Typography Scale */
-    --font-script: 'Dancing Script', cursive;
-    --font-hand: 'EB Garamond', serif; /* Use Serif for body text notes instead of Script */
-    --font-serif: 'EB Garamond', serif;
+    --font-script: 'Cormorant Garamond', serif;
+    --font-hand: 'Cormorant Garamond', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-display: 'Cinzel', serif;
+    
+    /* Navbar Theme Sync */
+    --nav-bg: 0 0% 18%; /* Solidified Background */
+    --nav-text: 35 40% 70%; /* Direct Gold */
     
     --radius: 0.1rem;
+
+    /* Base scale for artwork dimensions */
+    --art-scale: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    :root {
+      --art-scale: 18px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --art-scale: 12px;
+    }
   }
 }
 
 @layer base {
   * {
     @apply border-border;
-    cursor: none !important; /* Hide default cursor for custom brush-tip */
   }
   
   body {
-    @apply bg-background text-foreground font-serif antialiased overflow-x-hidden;
+    @apply bg-background text-foreground font-script antialiased overflow-x-hidden;
     line-height: 1.7;
     /* Removed dot grid for a cleaner gallery aesthetic */
   }
   
   h1, h2, h3 {
-    @apply font-script font-normal tracking-tight;
+    @apply font-display font-normal tracking-wider uppercase;
   }
   
   p {
@@ -69,7 +88,7 @@
 @layer components {
   /* Loading Animation */
   .loading-text {
-    @apply font-display text-6xl font-light tracking-wide;
+    @apply font-script text-6xl font-light tracking-wide;
     animation: typewriter 2s steps(20, end) forwards, blink 0.75s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
@@ -103,7 +122,7 @@
   }
   
   .art-card .art-title {
-    @apply text-white font-display text-xl tracking-wide opacity-0 transform translate-y-4 transition-all duration-300;
+    @apply text-white font-script text-xl tracking-wide opacity-0 transform translate-y-4 transition-all duration-300;
   }
   
   .art-card:hover .art-title {

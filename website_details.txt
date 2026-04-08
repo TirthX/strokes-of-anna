@@ -1,0 +1,174 @@
+================================================================================
+STROKES OF ANNA - WEBSITE DOCUMENTATION & TECHNICAL SPECIFICATIONS
+================================================================================
+
+1. PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+Project Name: Strokes of Anna
+Project Type: Professional Art Showcase & Portfolio
+Core Objective: To showcase Anna's artwork in an editorial-grade, premium digital environment.
+
+2. DESIGN SYSTEM & AESTHETICS
+--------------------------------------------------------------------------------
+Primary Aesthetic: Minimalist, Editorial, Premium, Human & Organic
+Palette:
+- Background: Warm Parchment (hsl(35, 30%, 95%) / #F5F2ED approx.)
+- Foreground: Deep Charcoal Ink (hsl(0, 0%, 15%) / #262626)
+- Accent: Terracotta Wash (hsl(12, 40%, 50%) / #D14D33 approx.)
+- Muted: Warm Dove Grey (hsl(35, 15%, 92%))
+- Border/Lines: Soft Ochre Edge (hsl(35, 20%, 85%))
+
+Typography:
+- Script/Heading: 'Dancing Script' (Google Fonts)
+- Serif/Body: 'EB Garamond' (Google Fonts)
+- Note Style: Italicized EB Garamond
+
+Key Visual Features:
+- Custom Brush-Tip Cursor (interactive)
+- Smooth Scroll (Lenis Implementation)
+- Parallax & Staggered Reveal Animations (Framer Motion)
+- Minimalist navigation with floating header
+- Paper-like textures and organic clip-paths for images
+
+3. SITE ARCHITECTURE (PAGES & ROUTES)
+--------------------------------------------------------------------------------
+- Home (/) : Hero section, featured story, and newsletter.
+- About (/about) : Detailed biography and artist statement.
+- Gallery (/gallery) : Full paginated collection of all artworks.
+- Contact (/contact) : Inquiry form for collectors.
+- Impact (/impact) : Philanthropic and narrative impact of the work.
+- Artwork Detail (/artwork/:id) : Focused view of individual pieces with magnifying details.
+- 404 (/not-found) : Custom error page maintaining site aesthetic.
+
+4. ARTWORK CATALOG (COMPREHENSIVE)
+--------------------------------------------------------------------------------
+
+PAGE 1 - "The First Chapter"
+---------------------------
+[ID: 1] Title: The Quiet Crossing
+Dimensions: 30" x 30"
+Price: $250
+Status: Available
+Description: Capturing the stillness of a moment in transit through nature.
+
+[ID: 2] Title: Bound by the Journey
+Dimensions: 16" x 20"
+Price: $300
+Status: SOLD
+Description: Tracing the invisible threads that connect our paths through the landscape.
+
+[ID: 3] Title: Calm in the Chaos
+Dimensions: 16" x 20"
+Price: $399
+Status: SOLD
+Description: Finding a center of peace amidst the vibrant energy of the world.
+
+[ID: 4] Title: Duality in Motion
+Dimensions: 16" x 20"
+Price: $250
+Status: Available
+Description: The contrast between stillness and movement within the natural frame.
+
+[ID: 5] Title: A Quiet Journey
+Dimensions: 20" x 20"
+Price: $499
+Status: Available
+Orientation: Landscape (Spans 2 columns)
+Description: A meditative transit through the heart of the landscape.
+
+[ID: 6] Title: The Edge of Becoming
+Dimensions: 48" x 24"
+Price: $299
+Status: Available
+Orientation: Landscape (Spans 2 columns)
+Description: A study of transformation at the boundaries of perceived reality.
+
+[ID: 7] Title: The World Can Rush
+Dimensions: 26" x 20" (Framed)
+Price: $250
+Status: Available
+Description: A reminder of inner stillness while the collective pace quickens.
+
+PAGE 2 - "The Continuing Narrative"
+----------------------------------
+[ID: 8] Title: Held by the Horizon
+Dimensions: Canvas: 20" x 20", Framed: 25.75" x 25.75"
+Price: $199
+Status: Available
+Description: A serene exploration of the meeting point between earth and sky.
+
+[ID: 9] Title: The Gaze
+Dimensions: 16" x 20"
+Price: $259
+Status: SOLD
+Description: An intimate portrait of observation and internal reflection.
+
+[ID: 10] Title: In the Silence He Awakens
+Dimensions: 16" x 20"
+Price: $299
+Status: SOLD
+Description: A spiritual awakening reflected in the dawn of a new landscape.
+
+[ID: 11] Title: Shakti
+Dimensions: Canvas: 16" x 20", Framed: 24" x 21"
+Price: $199
+Status: Available
+Description: A powerful expression of natural energy and creative force.
+
+[ID: 12] Title: Emerald Nights
+Dimensions: 12" x 16" (Canvas)
+Price: $110
+Status: Available
+Description: The mysterious and deep atmosphere of the night woods.
+
+[ID: 13] Title: After the Rain
+Dimensions: Canvas: 16" x 20", Framed: 26.4" x 22.5"
+Price: $159
+Status: Available
+Description: The clarity and freshness that follows a summer storm.
+
+[ID: 14] Title: Morning Meditation
+Dimensions: Canvas: 16" x 20", Framed: 24" x 21.5"
+Price: $140
+Status: Available
+Description: The quiet clarity of a new day beginning in nature.
+
+[ID: 15] Title: Rooted
+Dimensions: 16" x 20" (Canvas)
+Price: $159
+Status: Available
+Description: Connecting our foundations to the grounding earth.
+
+[ID: 16] Title: Emergence
+Dimensions: 39" x 39"
+Price: $499
+Status: Available
+Description: The powerful unfolding of form and color from nothingness.
+
+[ID: 17] Title: Serenity in Bloom
+Dimensions: 16" x 20"
+Price: $110
+Status: Available
+Description: The delicate peacefulness of natural growth.
+
+5. TECHNICAL STACK
+--------------------------------------------------------------------------------
+- Framework: React (Vite-powered)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Animation: Framer Motion
+- Scrolling: Studio Freight (Lenis) Smooth Scroll
+- Components: Shadcn UI (Radix-based)
+- Data Fetching: React Query (TanStack Query)
+- Deployment: Compatible with Vercel/Netlify/Vite-ready hosts
+
+6. ASSET MANAGEMENT
+--------------------------------------------------------------------------------
+- Main Art Assets: Located in /src/assets/
+- Organization: Divided into base folder and /assets/1/ for collection phases.
+- Formats: High-resolution PNG and JPEG.
+- Responsive Handling: Images utilize custom clip-paths and object-contain for an organic feel.
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================
