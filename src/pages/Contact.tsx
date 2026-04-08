@@ -55,7 +55,7 @@ const Contact = () => {
             >
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-4 border-b border-black/10 pb-4">
-                  <label className="font-display text-xs tracking-widest text-foreground/40 uppercase block">Full Name</label>
+                  <label className="font-display text-xs tracking-widest text-foreground/100 uppercase block">Full Name</label>
                   <input
                     name="name"
                     placeholder="Signature"
@@ -66,7 +66,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-4 border-b border-black/10 pb-4">
-                  <label className="font-display text-xs tracking-widest text-foreground/40 uppercase block">Email Address</label>
+                  <label className="font-display text-xs tracking-widest text-foreground/100 uppercase block">Email Address</label>
                   <input
                     name="email"
                     type="email"
@@ -80,7 +80,7 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4 border-b border-black/10 pb-4">
-                <label className="font-display text-xs tracking-widest text-foreground/40 uppercase block">Subject</label>
+                <label className="font-display text-xs tracking-widest text-foreground/100 uppercase block">Subject</label>
                 <input
                   name="subject"
                   placeholder="The Nature of Enquiry"
@@ -92,7 +92,7 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4 border-b border-black/10 pb-4">
-                <label className="font-display text-xs tracking-widest text-foreground/40 uppercase block">Message</label>
+                <label className="font-display text-xs tracking-widest text-foreground/100 uppercase block">Message</label>
                 <textarea
                   name="message"
                   placeholder="Share your thoughts..."

@@ -140,8 +140,8 @@ const ArtworkGrid = () => {
                       className="w-full h-auto block transition-all duration-[2000ms] ease-out-expo"
                     />
                     {artwork.isSold && (
-                      <div className="absolute top-6 right-6 z-20">
-                         <span className="font-display text-sm tracking-[0.2em] text-red-500/90 bg-white/90 backdrop-blur-sm px-4 py-2 shadow-sm border border-red-500/10">
+                      <div className="absolute bottom-4 right-4 z-20">
+                         <span className="font-display text-base tracking-[0.2em] text-red-600 drop-shadow-[0_2px_2px_rgba(255,255,255,0.5)]">
                            SOLD
                          </span>
                       </div>
