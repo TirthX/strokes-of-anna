@@ -122,8 +122,8 @@ const Gallery = () => {
                                className="w-full h-auto block transition-all duration-[2000ms] ease-out-expo"
                              />
                              {isSold && (
-                               <div className="absolute inset-0 bg-black/5 flex items-center justify-center">
-                                 <span className="font-display text-xl tracking-[0.4em] text-red-500/90 drop-shadow-md border-b border-red-500/20 pb-2">
+                               <div className="absolute top-6 right-6 z-20">
+                                 <span className="font-display text-sm tracking-[0.2em] text-red-500/90 bg-white/90 backdrop-blur-sm px-4 py-2 shadow-sm border border-red-500/10">
                                     SOLD
                                  </span>
                                </div>

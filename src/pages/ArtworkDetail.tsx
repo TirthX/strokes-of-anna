@@ -115,13 +115,13 @@ const ArtworkDetail = () => {
                     <div className="space-y-2">
                       <span className="font-hand text-xl text-foreground/40 block">Price</span>
                       <p className="font-script text-4xl text-accent">
-                        {artwork.price}
+                        {artwork.notForSale ? 'NOT FOR SALE' : artwork.price}
                       </p>
                     </div>
                   )}
                 </div>
                 
-                {!isSold && (
+                {!isSold && !artwork.notForSale && (
                   <div className={`pt-12 border-t border-black/5 ${isLandscape ? 'text-center' : ''}`}>
                     <p className="font-serif italic text-xl md:text-2xl text-muted-foreground leading-relaxed">
                       For purchase details please email <span className="font-script text-3xl text-foreground ml-1">Anna Pattabhi</span> at 

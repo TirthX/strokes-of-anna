@@ -25,7 +25,7 @@ import artworkSerenity from '@/assets/Serenity in bloom.png';
 
 // New Assets
 import artworkBTTN from '@/assets/BreakingThroughthe Noise12x12.png';
-import artworkEndurance from '@/assets/Endurance16x20.jpeg';
+import artworkEndurance from '@/assets/Endurance16x20.png';
 import artworkGanesh from '@/assets/Ganesh14x14.jpeg';
 import artworkRadheKrishna from '@/assets/RadheKrishna-DivineFlute59x47.png';
 import artworkShiva from '@/assets/ShivatheUnshaken16x20.jpeg';
@@ -76,16 +76,16 @@ const artworks: any[] = [
   { id: 35, page: 2, title: "A Quite Journey II", image: test2, dimensions: "12\" x 12\"", price: "$150", isSold: false, description: "Finding clarity in a crowded world." },
   { id: 16, page: 2, title: "Emergence", image: artworkEmergence, dimensions: "16\" x 20\"", price: "$199", isSold: false, description: "A serene exploration of the meeting point between earth and sky." },
   { id: 20, page: "GOD", title: "Ganesh", image: artworkGanesh, dimensions: "14\" x 14\"", price: "$180", isSold: false, description: "Divine wisdom and the removal of obstacles." },
-  { id: 21, page: "GOD", title: "Radhe Krishna - Divine Flute", image: artworkRadheKrishna, dimensions: "59\" x 47\"", price: "$1200", isSold: false, isLandscape: true, description: "A grand celestial celebration of love and music." },
+  { id: 21, page: "GOD", title: "Radhe Krishna - Divine Melody", image: artworkRadheKrishna, dimensions: "59\" x 47\"", price: "NOT FOR SALE", notForSale: true, isLandscape: true, description: "A grand celestial celebration of love and music." },
   { id: 22, page: "GOD", title: "Shiva The Unshaken", image: artworkShiva, dimensions: "16\" x 20\"", price: "$320", isSold: false, description: "The absolute stillness of the divine consciousness." },
-  { id: 23, page: "GOD", title: "The Cosmic Storm", image: artworkCosmicStorm, dimensions: "48\" x 36\"", price: "$850", isSold: false, isLandscape: true, description: "The chaotic beauty of universal creation." },
+
   { id: 24, page: 1, title: "The Dulhan", image: artworkDulhan, dimensions: "16\" x 20\"", price: "$299", isSold: false, description: "A portrait of tradition and quiet anticipation." },
   { id: 25, page: 1, title: "The Sacred Passage", image: artworkSacredPassage, dimensions: "8\" x 10\"", price: "$120", isSold: false, description: "A small window into a holy journey." },
   { id: 27, page: 1, title: "Unbroken", image: artworkUnbroken, dimensions: "20\" x 20\"", price: "$350", isSold: false, description: "Resilience in the face of fragmented reality." },
   { id: 28, page: 1, title: "She Becomes Light", image: artworkLight, dimensions: "8\" x 10\"", price: "$110", isSold: false, description: "The transcendence of form into pure energy." },
   { id: 29, page: "GOD", title: "The Divine Storm", image: artworkDivineStorm, dimensions: "59\" x 47\"", price: "$1150", isSold: false, isLandscape: true, description: "The intersection of heavenly power and earthly elements." },
   { id: 30, page: 2, title: "The Space She Keeps", image: artworkSpaceSheKeeps, dimensions: "30\" x 30\"", price: "$650", isSold: false, description: "An exploration of personal boundaries and inner sanctuary." },
-  { id: 31, page: 2, title: "Urban Drift", image: artworkUrbanDrift, dimensions: "25\" x 40\"", price: "$750", isSold: false, description: "The rhythmic pulse and flow of city life." },
+  { id: 31, page: 2, title: "Urban Drift", image: artworkUrbanDrift, dimensions: "25\" x 40\"", price: "NOT FOR SALE", notForSale: true, isSold: false, description: "The rhythmic pulse and flow of city life." },
   { id: 32, page: 2, title: "Weight of Unspoken Words", image: artworkWeightOfWords, dimensions: "30\" x 30\"", price: "$699", isSold: false, description: "The gravity of the things we leave unsaid." },
   { id: 37, page: 1, title: "Where Magic Blooms", image: artworkMagicBlooms, dimensions: "16\" x 20\"", price: "$240", isSold: false, description: "The enchanting growth of the impossible." }
 ];
@@ -140,8 +140,8 @@ const ArtworkGrid = () => {
                       className="w-full h-auto block transition-all duration-[2000ms] ease-out-expo"
                     />
                     {artwork.isSold && (
-                      <div className="absolute inset-0 bg-black/5 flex items-center justify-center">
-                         <span className="font-display text-xl tracking-[0.4em] text-white/90 drop-shadow-md border-b border-white/20 pb-2">
+                      <div className="absolute top-6 right-6 z-20">
+                         <span className="font-display text-sm tracking-[0.2em] text-red-500/90 bg-white/90 backdrop-blur-sm px-4 py-2 shadow-sm border border-red-500/10">
                            SOLD
                          </span>
                       </div>
